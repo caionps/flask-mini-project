@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de área</title>
+</head>
+<body>
+ <h1>Calculador de área</h1>
+ <h4>Insira o comprimento da aresta:</h4>
+ <form method="POST">
+   <input type="number" name="campo1">
+   <br/>
+   <br/>
+   <input type="submit" name="calcular" value="Calcular">
+  </form> 
+  {% if val != "nada" %}
+    <h3>A área é {{val}}m²</h3>
+  {% endif %}
+</body>
+</html>

@@ -8,15 +8,14 @@ app = Flask(__name__)
 @app.route('/', methods=["POST", "GET"])
 def home():
   if request.method == "POST":
-    aresta = int(request.form["campo1"])
-    
+    val1 = int(request.form["campo1"])
+
     if (request.form.get("calcular")):
-      resultado = aresta ^ 2
-      return render_template('index.html', area=resultado)
-      
+      res = val1 ** 2 
+      return render_template('index.html', val=res)
+
     return render_template('index.html')
-    
   else:
-    return render_template('index.html', area='na')
+    return render_template('index.html', val="nada")
 
 app.run(host="0.0.0.0", debug=True)
